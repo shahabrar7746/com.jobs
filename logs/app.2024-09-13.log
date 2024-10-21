@@ -1,0 +1,915 @@
+2024-09-13 21:39:27 - o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-13 21:39:27 - com.jobs.Application - Starting Application using Java 17.0.11 with PID 2356 (D:\Projects\com.jobs\target\classes started by shaha in D:\Projects\com.jobs)
+2024-09-13 21:39:27 - com.jobs.Application - The following 1 profile is active: "dev"
+2024-09-13 21:39:29 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 21:39:29 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 188 ms. Found 8 JPA repository interfaces.
+2024-09-13 21:39:30 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2024-09-13 21:39:30 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-13 21:39:30 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-13 21:39:30 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-13 21:39:31 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-13 21:39:31 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3782 ms
+2024-09-13 21:39:31 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 21:39:31 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 21:39:31 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-13 21:39:32 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 21:39:32 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-13 21:39:33 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@445058e8
+2024-09-13 21:39:33 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-13 21:39:35 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 21:39:36 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 21:39:37 - o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static fields: private static com.jobs.helper com.jobs.Main.help1
+2024-09-13 21:39:37 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-13 21:39:37 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 0120e033-64ff-48ef-a82f-c529a5881e11
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-13 21:39:37 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-13 21:39:38 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2024-09-13 21:39:38 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2024-09-13 21:39:38 - com.jobs.Application - Started Application in 12.571 seconds (process running for 13.775)
+2024-09-13 21:39:38 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:39 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:40 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:41 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:42 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:43 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:44 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:45 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:46 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:47 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:48 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:49 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:50 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:51 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:52 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:53 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:54 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:55 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:56 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:57 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:58 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:39:59 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:00 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:01 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:02 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:03 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:04 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:05 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:06 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:07 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:08 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:09 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:10 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:11 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:12 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:13 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:14 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:15 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:16 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:17 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:18 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:19 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:20 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:21 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:22 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:23 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:24 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:25 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:26 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:27 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:28 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:29 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:30 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:31 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:32 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:33 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:34 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:35 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:36 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:37 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:38 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:39 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:40 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:41 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:42 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:43 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:44 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:45 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:46 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:47 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:48 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:49 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:50 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:51 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:52 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:53 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:54 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:55 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:56 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:57 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:58 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:40:59 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:00 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:01 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:02 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:03 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:04 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:05 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:06 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:07 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:08 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:09 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:10 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:11 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:12 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:13 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:14 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:15 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:16 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:17 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:18 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:19 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:20 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:21 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:22 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:23 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:24 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:25 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:26 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:27 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:28 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:29 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:30 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:31 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:32 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:33 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:34 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:35 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:36 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:37 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:38 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:39 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:40 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:41 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:42 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:43 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:44 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:45 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:46 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:47 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:48 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:49 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:50 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:51 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:52 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:53 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:54 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:55 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:56 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:57 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:58 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:41:59 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:00 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:01 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:02 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:03 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:04 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:05 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:06 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:07 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:08 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:09 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:10 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:11 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:12 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:13 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:14 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:15 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:16 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:17 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:18 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:19 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:20 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:21 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:22 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:23 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:24 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:25 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:26 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:27 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:28 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:29 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:30 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:31 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:32 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:33 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:34 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:35 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:36 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:37 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:38 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:39 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:40 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:41 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:42 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:43 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:44 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:45 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:46 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:47 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:48 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:49 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:50 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:51 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:52 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:53 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:54 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:55 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:56 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:57 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:58 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:42:59 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:00 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:01 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:02 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:03 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:04 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:05 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:06 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:07 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:08 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:09 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:10 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:11 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:12 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:13 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:14 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:15 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:16 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:17 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:18 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:19 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:20 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:21 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:22 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:23 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:24 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:25 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:26 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:27 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:28 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:29 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:30 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:31 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:32 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:33 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:34 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:35 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:36 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:37 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:38 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:39 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:40 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:41 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:42 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:43 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:44 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:45 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:46 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:47 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:48 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:49 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:50 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:51 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:52 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:53 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:54 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:55 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:56 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:57 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:58 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:43:59 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:00 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:01 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:02 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:03 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:04 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:05 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:06 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:07 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:08 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:09 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:10 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:11 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:12 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:13 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:14 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:15 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:16 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:17 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:18 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:19 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:20 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:21 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:22 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:23 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:24 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:25 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:26 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:27 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:28 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:28 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 21:44:28 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-09-13 21:44:28 - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-09-13 21:44:29 - c.j.l.I.AuthenticationImplementation - issuing verification token for shahabrar7746@gmail.com
+2024-09-13 21:44:29 - c.j.l.L.RegistrationCompleteEventListener - issued verification token 8711bbb4-de47-4476-a345-5e0d5d69fea5 for email shahabrar7746@gmail.com
+2024-09-13 21:44:29 - com.jobs.helper - preparing to send verification email to shahabrar7746@gmail.com
+2024-09-13 21:44:29 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:30 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:31 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:32 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:33 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:34 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:34 - com.jobs.helper - verification email sent to shahabrar7746@gmail.com
+2024-09-13 21:44:35 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:36 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:37 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:38 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:39 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:40 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:41 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:42 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:43 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:44 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:45 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:46 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:47 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:48 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:49 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:50 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:51 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:52 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:53 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:54 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:55 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:56 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:57 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:58 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:44:59 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:00 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:01 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:02 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:03 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:04 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:05 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:06 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:07 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:08 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:09 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:10 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:11 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:12 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:13 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:14 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:15 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:16 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:17 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:18 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:19 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:20 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:21 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:22 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:23 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:24 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:25 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:26 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:27 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:28 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:29 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:30 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:31 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:32 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:33 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:34 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:35 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:36 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:37 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:38 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:39 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:40 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:41 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:42 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:43 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:44 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:45 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:46 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:47 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:48 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:49 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:50 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:51 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:52 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:53 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:54 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:55 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:56 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:57 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:58 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:45:59 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:00 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:01 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:02 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:03 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:04 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:05 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:06 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:07 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:08 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:09 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:10 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:11 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:12 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:13 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:14 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:15 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:16 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:17 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:18 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:19 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:20 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:21 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:22 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:23 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:24 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:25 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:26 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:27 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:28 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:29 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:30 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:31 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:32 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:33 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:34 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:35 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:36 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:37 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:38 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:39 - c.j.l.I.AuthenticationImplementation - issuing verification token for shahabrar7743@gmail.com
+2024-09-13 21:46:39 - c.j.l.L.RegistrationCompleteEventListener - issued verification token 4dd46119-30c9-4d24-95c4-c9ea21ddd695 for email shahabrar7743@gmail.com
+2024-09-13 21:46:39 - com.jobs.helper - preparing to send verification email to shahabrar7743@gmail.com
+2024-09-13 21:46:39 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:40 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:41 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:42 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:43 - com.jobs.helper - verification email sent to shahabrar7743@gmail.com
+2024-09-13 21:46:43 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:44 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:45 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:46 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:47 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:48 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:49 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:50 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:51 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:52 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:53 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:54 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:55 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:56 - com.jobs.helper - removing expired login tokens
+2024-09-13 21:46:57 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 21:46:57 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-13 21:46:57 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-13 21:49:47 - o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-13 21:49:47 - com.jobs.Application - Starting Application using Java 17.0.11 with PID 12352 (D:\Projects\com.jobs\target\classes started by shaha in D:\Projects\com.jobs)
+2024-09-13 21:49:47 - com.jobs.Application - The following 1 profile is active: "dev"
+2024-09-13 21:49:49 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 21:49:50 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 571 ms. Found 8 JPA repository interfaces.
+2024-09-13 21:49:51 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2024-09-13 21:49:51 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-13 21:49:51 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-13 21:49:51 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-13 21:49:52 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-13 21:49:52 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4243 ms
+2024-09-13 21:49:52 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 21:49:52 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 21:49:52 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-13 21:49:53 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 21:49:53 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-13 21:49:53 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b444b5
+2024-09-13 21:49:53 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-13 21:49:56 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 21:49:56 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 21:49:57 - o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static fields: private static com.jobs.helper com.jobs.Main.help1
+2024-09-13 21:49:57 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-13 21:49:57 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: c6b1c5b2-e39c-4dd6-bcdf-d5e7acde7bf6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-13 21:49:57 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-13 21:49:58 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2024-09-13 21:49:58 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2024-09-13 21:49:58 - com.jobs.Application - Started Application in 11.722 seconds (process running for 12.417)
+2024-09-13 21:50:41 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 21:50:41 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-09-13 21:50:41 - o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2024-09-13 21:51:40 - c.j.l.I.AuthenticationImplementation - issuing verification token for shahabrar7743@gmail.com
+2024-09-13 21:51:40 - c.j.l.L.RegistrationCompleteEventListener - issued verification token 427e2f56-5cd8-4b72-b939-1a2d85d12b27 for email shahabrar7743@gmail.com
+2024-09-13 21:51:40 - c.j.l.L.RegistrationCompleteEventListener - COMPLETED TASK : USER OBJECT SAVED!!
+2024-09-13 21:51:40 - c.j.l.L.RegistrationCompleteEventListener - EXPECTED TASK : USER VERIFICATION !!
+2024-09-13 21:51:40 - com.jobs.helper - preparing to send verification email to shahabrar7743@gmail.com
+2024-09-13 21:51:45 - com.jobs.helper - verification email sent to shahabrar7743@gmail.com
+2024-09-13 21:52:05 - c.j.l.I.AuthenticationImplementation - user shahabrar7743@gmail.com verified through token 427e2f56-5cd8-4b72-b939-1a2d85d12b27
+2024-09-13 21:52:05 - c.j.l.I.AuthenticationImplementation - removed verified token 427e2f56-5cd8-4b72-b939-1a2d85d12b27 from database
+2024-09-13 22:08:04 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 22:08:04 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-13 22:08:04 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-13 22:08:14 - o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-13 22:08:14 - com.jobs.Application - Starting Application using Java 17.0.11 with PID 2456 (D:\Projects\com.jobs\target\classes started by shaha in D:\Projects\com.jobs)
+2024-09-13 22:08:14 - com.jobs.Application - The following 1 profile is active: "dev"
+2024-09-13 22:08:16 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 22:08:16 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 191 ms. Found 8 JPA repository interfaces.
+2024-09-13 22:08:18 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2024-09-13 22:08:18 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-13 22:08:18 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-13 22:08:18 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-13 22:08:18 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-13 22:08:18 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3258 ms
+2024-09-13 22:08:18 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 22:08:18 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 22:08:18 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-13 22:08:19 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 22:08:19 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-13 22:08:20 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ac685ef
+2024-09-13 22:08:20 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-13 22:08:22 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 22:08:22 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 22:08:23 - o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static fields: private static com.jobs.helper com.jobs.Main.help1
+2024-09-13 22:08:23 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-13 22:08:23 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 4c41a93b-8a08-4b98-be31-9773f76fbc48
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-13 22:08:23 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-13 22:08:24 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2024-09-13 22:08:24 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2024-09-13 22:08:24 - com.jobs.Application - Started Application in 10.778 seconds (process running for 11.611)
+2024-09-13 22:09:05 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 22:09:05 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-09-13 22:09:05 - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-09-13 22:09:07 - c.j.l.I.AuthenticationImplementation - issuing verification token for shahabrar7743@gmail.com
+2024-09-13 22:09:07 - c.j.l.L.RegistrationCompleteEventListener - issued verification token 2ae87290-3aaa-4022-988d-151d8d78e369 for email shahabrar7743@gmail.com
+2024-09-13 22:09:07 - c.j.l.L.RegistrationCompleteEventListener - COMPLETED TASK
+2024-09-13 22:09:07 - c.j.l.L.RegistrationCompleteEventListener - EXPECTED TASK
+2024-09-13 22:09:07 - com.jobs.helper - preparing to send verification email to shahabrar7743@gmail.com
+2024-09-13 22:09:12 - com.jobs.helper - verification email sent to shahabrar7743@gmail.com
+2024-09-13 22:11:29 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 22:11:29 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-13 22:11:29 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-13 22:11:36 - o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-13 22:11:36 - com.jobs.Application - Starting Application using Java 17.0.11 with PID 2784 (D:\Projects\com.jobs\target\classes started by shaha in D:\Projects\com.jobs)
+2024-09-13 22:11:36 - com.jobs.Application - The following 1 profile is active: "dev"
+2024-09-13 22:11:38 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 22:11:38 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 181 ms. Found 8 JPA repository interfaces.
+2024-09-13 22:11:39 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2024-09-13 22:11:39 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-13 22:11:39 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-13 22:11:39 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-13 22:11:39 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-13 22:11:39 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3187 ms
+2024-09-13 22:11:40 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 22:11:40 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 22:11:40 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-13 22:11:40 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 22:11:41 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-13 22:11:41 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ab455e2
+2024-09-13 22:11:41 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-13 22:11:43 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 22:11:44 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 22:11:44 - o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static fields: private static com.jobs.helper com.jobs.Main.help1
+2024-09-13 22:11:45 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-13 22:11:45 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 9628822d-146a-4e54-a064-81e09c8bd4ba
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-13 22:11:45 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-13 22:11:46 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2024-09-13 22:11:46 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2024-09-13 22:11:46 - com.jobs.Application - Started Application in 10.655 seconds (process running for 11.506)
+2024-09-13 22:11:53 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 22:11:53 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-09-13 22:11:53 - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-09-13 22:11:54 - c.j.l.I.AuthenticationImplementation - issuing verification token for shahabrar7743@gmail.com
+2024-09-13 22:11:54 - c.j.l.L.RegistrationCompleteEventListener - issued verification token 266a1498-c1b2-4607-8b44-345b74015340 for email shahabrar7743@gmail.com
+2024-09-13 22:11:54 - c.j.l.L.RegistrationCompleteEventListener - COMPLETED TASK : VERIFICATION BY EMAIL
+2024-09-13 22:11:54 - c.j.l.L.RegistrationCompleteEventListener - EXPECTED TASK : VERIFICATION BY EMAIL
+2024-09-13 22:11:54 - com.jobs.helper - preparing to send verification email to shahabrar7743@gmail.com
+2024-09-13 22:11:59 - com.jobs.helper - verification email sent to shahabrar7743@gmail.com
+2024-09-13 22:12:33 - c.j.l.I.AuthenticationImplementation - user shahabrar7743@gmail.com verified through token 266a1498-c1b2-4607-8b44-345b74015340
+2024-09-13 22:12:33 - c.j.l.I.AuthenticationImplementation - removed verified token 266a1498-c1b2-4607-8b44-345b74015340 from database
+2024-09-13 22:12:33 - c.j.l.I.AuthenticationImplementation - COMPLETED TASK
+2024-09-13 22:18:38 - c.j.l.I.AuthenticationImplementation - Employee registration completion attempt using invalid email, shahabrar7746@gmail.com
+2024-09-13 22:52:00 - c.j.l.I.AuthenticationImplementation - issuing verification token for shahabrar7746@gmail.com
+2024-09-13 22:52:00 - c.j.l.L.RegistrationCompleteEventListener - issued verification token 8218c515-9ec2-45f4-83c1-9b8e2d2e8666 for email shahabrar7746@gmail.com
+2024-09-13 22:52:00 - c.j.l.L.RegistrationCompleteEventListener - COMPLETED TASK : VERIFICATION BY EMAIL
+2024-09-13 22:52:00 - c.j.l.L.RegistrationCompleteEventListener - EXPECTED TASK : VERIFICATION BY EMAIL
+2024-09-13 22:52:00 - com.jobs.helper - preparing to send verification email to shahabrar7746@gmail.com
+2024-09-13 22:52:04 - com.jobs.helper - verification email sent to shahabrar7746@gmail.com
+2024-09-13 22:56:20 - c.j.l.I.AuthenticationImplementation - issuing verification token for pitisok742@asaud.com
+2024-09-13 22:56:20 - c.j.l.L.RegistrationCompleteEventListener - issued verification token b58d0321-d3a6-4172-8593-d40cfa10579a for email pitisok742@asaud.com
+2024-09-13 22:56:20 - c.j.l.L.RegistrationCompleteEventListener - COMPLETED TASK : VERIFICATION BY EMAIL
+2024-09-13 22:56:20 - c.j.l.L.RegistrationCompleteEventListener - EXPECTED TASK : VERIFICATION BY EMAIL
+2024-09-13 22:56:20 - com.jobs.helper - preparing to send verification email to pitisok742@asaud.com
+2024-09-13 22:56:24 - com.jobs.helper - verification email sent to pitisok742@asaud.com
+2024-09-13 22:56:37 - c.j.l.I.AuthenticationImplementation - user pitisok742@asaud.com verified through token b58d0321-d3a6-4172-8593-d40cfa10579a
+2024-09-13 22:56:37 - c.j.l.I.AuthenticationImplementation - removed verified token b58d0321-d3a6-4172-8593-d40cfa10579a from database
+2024-09-13 22:56:37 - c.j.l.I.AuthenticationImplementation - COMPLETED TASK
+2024-09-13 22:59:11 - c.j.l.I.EmployeeServiceImplementation - Save employee method executed
+2024-09-13 23:03:09 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 23:03:09 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-13 23:03:09 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-13 23:06:58 - o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-13 23:06:58 - com.jobs.Application - Starting Application using Java 17.0.11 with PID 13532 (D:\Projects\com.jobs\target\classes started by shaha in D:\Projects\com.jobs)
+2024-09-13 23:06:58 - com.jobs.Application - The following 1 profile is active: "dev"
+2024-09-13 23:06:59 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 23:06:59 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 8 JPA repository interfaces.
+2024-09-13 23:07:00 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2024-09-13 23:07:00 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-13 23:07:00 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-13 23:07:00 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-13 23:07:00 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-13 23:07:00 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1494 ms
+2024-09-13 23:07:00 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 23:07:00 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 23:07:00 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-13 23:07:00 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 23:07:00 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-13 23:07:00 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@459bf87c
+2024-09-13 23:07:00 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-13 23:07:01 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 23:07:02 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 23:07:02 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'companyController': Unsatisfied dependency expressed through field 'companyService': Error creating bean with name 'companyServiceImplementation': Unsatisfied dependency expressed through field 'employeService': No qualifying bean of type 'com.jobs.layers.Services.EmployeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-09-13 23:07:02 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 23:07:02 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-13 23:07:02 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-13 23:07:02 - o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-09-13 23:07:02 - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-13 23:07:02 - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field employeService in com.jobs.layers.Implementations.CompanyServiceImplementation required a bean of type 'com.jobs.layers.Services.EmployeService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.jobs.layers.Services.EmployeService' in your configuration.
+
+2024-09-13 23:08:15 - o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-13 23:08:15 - com.jobs.Application - Starting Application using Java 17.0.11 with PID 14132 (D:\Projects\com.jobs\target\classes started by shaha in D:\Projects\com.jobs)
+2024-09-13 23:08:15 - com.jobs.Application - The following 1 profile is active: "dev"
+2024-09-13 23:08:16 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 23:08:16 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 8 JPA repository interfaces.
+2024-09-13 23:08:17 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2024-09-13 23:08:17 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-13 23:08:17 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-13 23:08:17 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-13 23:08:17 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-13 23:08:17 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1445 ms
+2024-09-13 23:08:17 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 23:08:17 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 23:08:17 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-13 23:08:17 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 23:08:17 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-13 23:08:18 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b3085a3
+2024-09-13 23:08:18 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-13 23:08:18 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 23:08:19 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 23:08:19 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'companyController': Unsatisfied dependency expressed through field 'companyService': Error creating bean with name 'companyServiceImplementation': Unsatisfied dependency expressed through field 'employeeService': No qualifying bean of type 'com.jobs.layers.Implementations.EmployeeServiceImplementation' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-09-13 23:08:19 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 23:08:19 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-13 23:08:19 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-13 23:08:19 - o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-09-13 23:08:19 - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-13 23:08:19 - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field employeeService in com.jobs.layers.Implementations.CompanyServiceImplementation required a bean of type 'com.jobs.layers.Implementations.EmployeeServiceImplementation' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.jobs.layers.Implementations.EmployeeServiceImplementation' in your configuration.
+
+2024-09-13 23:09:04 - o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-13 23:09:04 - com.jobs.Application - Starting Application using Java 17.0.11 with PID 11076 (D:\Projects\com.jobs\target\classes started by shaha in D:\Projects\com.jobs)
+2024-09-13 23:09:04 - com.jobs.Application - The following 1 profile is active: "dev"
+2024-09-13 23:09:05 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 23:09:05 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 8 JPA repository interfaces.
+2024-09-13 23:09:06 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2024-09-13 23:09:06 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-13 23:09:06 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-13 23:09:06 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-13 23:09:06 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-13 23:09:06 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1460 ms
+2024-09-13 23:09:06 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 23:09:06 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 23:09:06 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-13 23:09:06 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 23:09:06 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-13 23:09:06 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@698ac187
+2024-09-13 23:09:06 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-13 23:09:07 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 23:09:07 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 23:09:08 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'companyController': Unsatisfied dependency expressed through field 'companyService': Error creating bean with name 'companyServiceImplementation': Unsatisfied dependency expressed through field 'employeeService': No qualifying bean of type 'com.jobs.layers.Services.EmployeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-09-13 23:09:08 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 23:09:08 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-13 23:09:08 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-13 23:09:08 - o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-09-13 23:09:08 - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-13 23:09:08 - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field employeeService in com.jobs.layers.Implementations.CompanyServiceImplementation required a bean of type 'com.jobs.layers.Services.EmployeService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.jobs.layers.Services.EmployeService' in your configuration.
+
+2024-09-13 23:12:30 - o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-13 23:12:30 - com.jobs.Application - Starting Application using Java 17.0.11 with PID 740 (D:\Projects\com.jobs\target\classes started by shaha in D:\Projects\com.jobs)
+2024-09-13 23:12:30 - com.jobs.Application - The following 1 profile is active: "dev"
+2024-09-13 23:12:31 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 23:12:31 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 8 JPA repository interfaces.
+2024-09-13 23:12:31 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2024-09-13 23:12:31 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-13 23:12:31 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-13 23:12:31 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-13 23:12:31 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-13 23:12:31 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1502 ms
+2024-09-13 23:12:32 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 23:12:32 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 23:12:32 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-13 23:12:32 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 23:12:32 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-13 23:12:32 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32f308c6
+2024-09-13 23:12:32 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-13 23:12:33 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 23:12:33 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 23:12:34 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'companyController': Unsatisfied dependency expressed through field 'companyService': Error creating bean with name 'companyServiceImplementation': Unsatisfied dependency expressed through field 'employeService': No qualifying bean of type 'com.jobs.layers.Services.EmployeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-09-13 23:12:34 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 23:12:34 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-13 23:12:34 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-13 23:12:34 - o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-09-13 23:12:34 - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-13 23:12:34 - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field employeService in com.jobs.layers.Implementations.CompanyServiceImplementation required a bean of type 'com.jobs.layers.Services.EmployeService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.jobs.layers.Services.EmployeService' in your configuration.
+
+2024-09-13 23:14:25 - o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-13 23:14:25 - com.jobs.Application - Starting Application using Java 17.0.11 with PID 9456 (D:\Projects\com.jobs\target\classes started by shaha in D:\Projects\com.jobs)
+2024-09-13 23:14:25 - com.jobs.Application - The following 1 profile is active: "dev"
+2024-09-13 23:14:26 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 23:14:26 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78 ms. Found 8 JPA repository interfaces.
+2024-09-13 23:14:26 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2024-09-13 23:14:26 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-13 23:14:26 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-13 23:14:26 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-13 23:14:26 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-13 23:14:26 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1504 ms
+2024-09-13 23:14:26 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 23:14:26 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 23:14:27 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-13 23:14:27 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 23:14:27 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-13 23:14:27 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a7a6d34
+2024-09-13 23:14:27 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-13 23:14:28 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 23:14:28 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 23:14:28 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'companyController': Unsatisfied dependency expressed through field 'companyService': Error creating bean with name 'companyServiceImplementation': Unsatisfied dependency expressed through field 'employeService': No qualifying bean of type 'com.jobs.layers.Implementations.EmployeeServiceImplementation' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-09-13 23:14:28 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 23:14:28 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-13 23:14:28 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-13 23:14:28 - o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-09-13 23:14:28 - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-13 23:14:28 - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field employeService in com.jobs.layers.Implementations.CompanyServiceImplementation required a bean of type 'com.jobs.layers.Implementations.EmployeeServiceImplementation' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.jobs.layers.Implementations.EmployeeServiceImplementation' in your configuration.
+
+2024-09-13 23:17:20 - o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-13 23:17:20 - com.jobs.Application - Starting Application using Java 17.0.11 with PID 10404 (D:\Projects\com.jobs\target\classes started by shaha in D:\Projects\com.jobs)
+2024-09-13 23:17:20 - com.jobs.Application - The following 1 profile is active: "dev"
+2024-09-13 23:17:21 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 23:17:21 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 8 JPA repository interfaces.
+2024-09-13 23:17:22 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2024-09-13 23:17:22 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-13 23:17:22 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-13 23:17:22 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-13 23:17:22 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-13 23:17:22 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1723 ms
+2024-09-13 23:17:22 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 23:17:22 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 23:17:23 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-13 23:17:23 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 23:17:23 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-13 23:17:23 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1aaf46e6
+2024-09-13 23:17:23 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-13 23:17:24 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 23:17:24 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 23:17:25 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'companyController': Unsatisfied dependency expressed through field 'companyService': Error creating bean with name 'companyServiceImplementation': Unsatisfied dependency expressed through field 'employeService': No qualifying bean of type 'com.jobs.layers.Services.EmployeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-09-13 23:17:25 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 23:17:25 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-13 23:17:25 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-13 23:17:25 - o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-09-13 23:17:25 - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-13 23:17:25 - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field employeService in com.jobs.layers.Implementations.CompanyServiceImplementation required a bean of type 'com.jobs.layers.Services.EmployeService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.jobs.layers.Services.EmployeService' in your configuration.
+

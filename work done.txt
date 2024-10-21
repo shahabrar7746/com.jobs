@@ -1,0 +1,11 @@
+Login and Registeration of users(employe and companies).
+verification of both.
+forgot password and reset password.
+Job Search done(after employe login).
+Job Posting done(after company login).
+Search company by Encrypted Id.
+find employee by Encrypted Id.
+Application Logging done.
+listing of emlpoyees
+Profile viewed and listing.
+complete method in company service implementation.
