@@ -24,10 +24,12 @@ import java.net.UnknownHostException;
 import java.util.*;
 
 @Component
-@EnableScheduling
+
 public class helper {
 
+helper(){
 
+}
     @Autowired
     private ServerProperties serverProp;
     @Autowired

@@ -6,6 +6,7 @@ import com.jobs.layers.Exceptions.*;
 import com.jobs.layers.Messages.TaskCategories;
 import com.jobs.layers.Messages.Tasks;
 import com.jobs.layers.Repositories.*;
+import com.jobs.layers.Responses.Response;
 import com.jobs.layers.Services.Authentication;
 import com.jobs.layers.Messages.StringMessages;
 import com.jobs.layers.Services.CompanyService;
@@ -53,7 +54,7 @@ private helper help;
 
 private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    public com.jobs.layers.Entities.user register(String userType, userModel requestModel) throws InvalidUserTypeException,EmailInUseException{
+    public Response<com.jobs.layers.Entities.user> register(String userType, userModel requestModel) throws InvalidUserTypeException,EmailInUseException{
 
         if(!userType.equalsIgnoreCase("employee") && !userType.equalsIgnoreCase("company") ){
             throw new InvalidUserTypeException(HttpStatus.BAD_REQUEST,StringMessages.INVALID_USER);
@@ -79,7 +80,8 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
         }catch (Exception e){
             logger.error("An expected error occured",e);
         }
- return newUser;
+        Response<user> response = new Response<>(newUser, HttpStatus.ACCEPTED.value());
+ return response;
     }
 
     @Override
@@ -91,7 +93,7 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
     }
 
     @Override
-    public ResponseEntity<String> verifyToken(String token,String userType) throws TOKEN_EXPIRED, InvalidUserTypeException {
+    public ResponseEntity<Response<String>> verifyToken(String token,String userType) throws TOKEN_EXPIRED, InvalidUserTypeException {
         if(!userType.equals("employee") && !userType.equals("company") ){
             throw new InvalidUserTypeException(HttpStatus.BAD_REQUEST,StringMessages.INVALID_USER);
         }
@@ -117,11 +119,14 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
          logger.info("removed verified token {} from database",token);
           logger.info("{} : {}",TaskCategories.COMPLETED_TASK, Tasks.COMPLETE_REGITRATION_TASK);
 
-        return ResponseEntity.ok("Verified!!");
+
+
+          Response<String> response = new Response<>("Verified", HttpStatus.OK.value());
+        return ResponseEntity.ok(response);
     }
 
     @Override
-    public user resendVerificationToken(String token) throws TOKEN_EXPIRED{
+    public Response<user> resendVerificationToken(String token) throws TOKEN_EXPIRED{
         verificationTokens oldToken = tokenRepo.findByToken(token);
         if(oldToken == null){
             throw  new TOKEN_EXPIRED(HttpStatus.NOT_FOUND,StringMessages.TOKEN_EXPIRED);
@@ -134,22 +139,23 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
         }catch (Exception e){
             logger.error("An unexpected error occured", e);
         }
-
-        return curUser;
+Response<user> response = new Response<>(curUser, HttpStatus.OK.value());
+        return response;
     }
 
     @Override
-    public user forgotPassword(String email) throws EmailNotFoundException {
+    public Response<user> forgotPassword(String email) throws EmailNotFoundException {
        user curUser = userRepo.findByEmail(email);
        if(curUser == null){
            logger.error("Requested Password Change for Invalid Email");
            throw new EmailNotFoundException(HttpStatus.NOT_FOUND, StringMessages.EMAIL_NOT_FOUND);
        }
-       return curUser;
+       Response<user> response = new Response<>(curUser, HttpStatus.ACCEPTED.value());
+       return response;
     }
 
     @Override
-    public ResponseEntity<String> changePassword(String token, NewPasswordBody newPass) throws TOKEN_EXPIRED {
+    public ResponseEntity<Response<String>> changePassword(String token, NewPasswordBody newPass) throws TOKEN_EXPIRED {
           PasswordResetTokens tokenObject  = ResetPasswordRepo.findByToken(token);
           if(tokenObject == null){
               logger.error("Threw an Password Token Expiration Exception for token ",token);
@@ -169,11 +175,12 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
         logger.info("Changing Password for user with id {}", curUser.id);
         ResetPasswordRepo.deleteById(tokenObject.id);
         userRepo.save(curUser);
-        return ResponseEntity.ok("Changed Password Succesfully");
+        Response<String> response = new Response<>("Changed Password Succesfully", HttpStatus.OK.value());
+        return ResponseEntity.ok(response);
     }
 
     @Override
-    public ResponseEntity<String> changeCurrentPassword(ChangePasswordBody passwordBody) throws EmailNotFoundException, InvalidPasswordException {
+    public ResponseEntity<Response<String>> changeCurrentPassword(ChangePasswordBody passwordBody) throws EmailNotFoundException, InvalidPasswordException {
         user curUser = userRepo.findByEmail(passwordBody.email);
         logger.info("finding user object for Change old password query for email {}",passwordBody.email);
         if(curUser == null){
@@ -190,12 +197,13 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
         curUser.encrypted_password = newEncyrptedPassword;
         userRepo.save(curUser);
         logger.info("Change password query resolved for email {}", curUser.email);
-        return ResponseEntity.ok("Password Changed");
+        Response<String> response = new Response<>("Password Changed", HttpStatus.OK.value());
+        return ResponseEntity.ok(response);
 
     }
 
     @Override
-    public String completeRegistrationForComapnies(String email, CompanyReceptionTemplate comp) throws EmailNotFoundException,UnAuthenticatedAccountAccessException {
+    public Response<String> completeRegistrationForComapnies(String email, CompanyReceptionTemplate comp) throws EmailNotFoundException,UnAuthenticatedAccountAccessException {
      user curUser = userRepo.findByEmail(email);
      if(curUser == null){
          logger.error("Employee registration completion attempt using invalid email, {}",email);
@@ -216,15 +224,15 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
         companiesObject.encryptedId = UUID.randomUUID().toString();
         companiesObject.userObject = curUser;
      comService.save(companiesObject);
-
-     return "/company/"+companiesObject.encryptedId;
+Response<String> response = new Response<>("/company/"+companiesObject.encryptedId, HttpStatus.OK.value());
+     return response;
 
 
 
     }
 
     @Override
-    public String completeRegistrationForEmployee(String email, EmployeeReceptionTemplate empl) throws EmailNotFoundException, UnAuthenticatedAccountAccessException {
+    public Response<String> completeRegistrationForEmployee(String email, EmployeeReceptionTemplate empl) throws EmailNotFoundException, UnAuthenticatedAccountAccessException {
         user curUser = userRepo.findByEmail(email);
         if(curUser == null){
             logger.error("Company registration completion attempt using invalid email, {}",email);
@@ -248,11 +256,12 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
         employeeObject.userId = curUser;
         userRepo.save(curUser);
         employeeService.save(employeeObject);
-        return "/employee/" + employeeObject.encryptedId;
+        Response<String> response = new Response<>("/employee/" + employeeObject.encryptedId, HttpStatus.ACCEPTED.value());
+        return response;
     }
 
     @Override
-    public ResponseEntity<String> loginEmployee(Login credentials) throws EmailNotFoundException, InvalidPasswordException, UnAuthenticatedAccountAccessException {
+    public ResponseEntity<Response<String>> loginEmployee(Login credentials) throws EmailNotFoundException, InvalidPasswordException, UnAuthenticatedAccountAccessException {
       user userObject = userRepo.findByEmail(credentials.email);
      if(!encoder.matches(credentials.password, userObject.encrypted_password)){
          throw new InvalidPasswordException(HttpStatus.FORBIDDEN, StringMessages.INVALID_PASSWORD);
@@ -267,12 +276,13 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
 
      tokens tokenObj = new tokens(userObject, uuid);
      loginTokenRepo.save(tokenObj);
-     return ResponseEntity.ok(uuid);
+     Response<String> response = new Response<>(uuid, HttpStatus.ACCEPTED.value());
+     return ResponseEntity.ok(response);
 
     }
 
     @Override
-    public ResponseEntity<String> loginCompany(Login credentials) throws EmailNotFoundException, InvalidPasswordException, UnAuthenticatedAccountAccessException {
+    public ResponseEntity<Response<String>> loginCompany(Login credentials) throws EmailNotFoundException, InvalidPasswordException, UnAuthenticatedAccountAccessException {
         String uuid = help.getNewUUID();
         user com = userRepo.findByEmail(credentials.email);
         if(com == null){
@@ -286,7 +296,8 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
         }
         tokens curLoginToken = new tokens(com,uuid);
         loginTokenRepo.save(curLoginToken);
-        return ResponseEntity.ok(uuid);
+        Response<String> response = new Response<>(uuid, HttpStatus.ACCEPTED.value());
+        return ResponseEntity.ok(response);
     }
 
 

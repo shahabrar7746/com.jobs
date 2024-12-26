@@ -13,6 +13,7 @@ import com.jobs.layers.Messages.Mails.MailBodies;
 import com.jobs.layers.Messages.Mails.MailSubjects;
 import com.jobs.layers.Messages.StringMessages;
 import com.jobs.layers.Repositories.*;
+import com.jobs.layers.Responses.Response;
 import com.jobs.layers.Services.CompanyService;
 import com.jobs.layers.Services.EmployeService;
 import com.jobs.layers.Services.JobsService;
@@ -58,13 +59,14 @@ helper help;
 private ApplicationEventPublisher publisher;
 
 
-    public String save(companies com) {
+    public Response<String> save(companies com) {
         comRepo.save(com);
-        return "Saved!";
+        Response<String> response = new Response<>("Saved",HttpStatus.ACCEPTED.value());
+        return response;
     }
 
     @Override
-    public CompanyTransferTemplate fetchByEncrypetdId(String id) throws InvalidEncryptedIdException {
+    public Response<CompanyTransferTemplate> fetchByEncrypetdId(String id) throws InvalidEncryptedIdException {
            companies com = comRepo.findByEncryptedId(id);
            if(com == null){
                throw new InvalidEncryptedIdException(HttpStatus.BAD_REQUEST, StringMessages.INAVLID_ENCRYPTED_ID);
@@ -78,11 +80,13 @@ private ApplicationEventPublisher publisher;
            companyTemplate.encryptedId = com.encryptedId;
            companyTemplate.rating = com.rating;
            companyTemplate.joinedSince = userObject.createdAt;
-           return companyTemplate;
+          Response<CompanyTransferTemplate> response = new Response<>(companyTemplate, HttpStatus.OK.value());
+           // return companyTemplate;
+        return response;
     }
 
     @Override
-    public ResponseEntity<String> postJob(JobPostTemplate job) throws TOKEN_EXPIRED {
+    public ResponseEntity<Response<String>> postJob(JobPostTemplate job) throws TOKEN_EXPIRED {
         tokens curLoginToken = loginTokenRepo.findByToken(job.loginToken);
         if(curLoginToken == null){
             throw new TOKEN_EXPIRED(HttpStatus.BAD_REQUEST, StringMessages.TOKEN_EXPIRED);
@@ -103,26 +107,29 @@ private ApplicationEventPublisher publisher;
         jobsService.save(curJobPost);
         //increase expiration time of token.
         loginTokenRepo.save(help.increaseExpirationTimeOfLoginTokens(curLoginToken));
-        return ResponseEntity.ok(curLoginToken.token);
+        //return ResponseEntity.ok(curLoginToken.token);
+           Response<String> response = new Response<>(curLoginToken.token, HttpStatus.ACCEPTED.value());
+           return ResponseEntity.ok(response);
     }
 
     @Override
-    public ResponseEntity<List<EmployeeTransferTemplate>> findAllEmployeeByQuery(String token, String query, final HttpServletRequest req) throws TOKEN_EXPIRED, UnknownHostException {
+    public ResponseEntity<Response<List<EmployeeTransferTemplate>>> findAllEmployeeByQuery(String token, String query, final HttpServletRequest req) throws TOKEN_EXPIRED, UnknownHostException {
       tokens curToken = loginTokenRepo.findByToken(token);
       if(curToken == null || help.isTokenExpired(curToken)){
           throw new TOKEN_EXPIRED(HttpStatus.BAD_REQUEST, StringMessages.TOKEN_EXPIRED);
       }
       companies com = comRepo.findByUserObject(curToken.userObj);
 
-     List<EmployeeTransferTemplate> resolutionList = employeService.findEmployeeByQuery(query,com,req);
+     List<EmployeeTransferTemplate> resolutionList = employeService.findEmployeeByQuery(query,com,req).data;
 
      loginTokenRepo.save(help.increaseExpirationTimeOfLoginTokens(curToken));
-        return ResponseEntity.ok(resolutionList);
-
+       // return ResponseEntity.ok(resolutionList);
+  Response<List<EmployeeTransferTemplate>> response = new Response<>(resolutionList, HttpStatus.OK.value());
+  return ResponseEntity.ok(response);
     }
 
     @Override
-    public ResponseEntity<String> invite(JobInvitation invite, final HttpServletRequest req) throws TOKEN_EXPIRED, NoJobsFoundException, NoEmployeeFoundException, InvalidEncryptedIdException, InviteAlreadySentException, UnknownHostException {
+    public ResponseEntity<Response<String>> invite(JobInvitation invite, final HttpServletRequest req) throws TOKEN_EXPIRED, NoJobsFoundException, NoEmployeeFoundException, InvalidEncryptedIdException, InviteAlreadySentException, UnknownHostException {
       tokens curToken = loginTokenRepo.findByToken(invite.token);
 
       if(curToken == null || help.isTokenExpired(curToken)){
@@ -155,11 +162,8 @@ private ApplicationEventPublisher publisher;
         String jobUrl = help.generateHosturl(req) + "/job/" + invitedJob.encryptedId;
         JobInviteEvent event = new JobInviteEvent(emp.userId.email, jobUrl);
         publisher.publishEvent(event);
-
-        return ResponseEntity.ok(curToken.token);
-
-
-
+        Response<String> response = new Response<>(curToken.token, HttpStatus.ACCEPTED.value());
+        return ResponseEntity.ok(response);
     }
 
 }

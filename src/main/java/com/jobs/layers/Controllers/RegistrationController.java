@@ -9,6 +9,7 @@ import com.jobs.layers.Entities.jobs;
 import com.jobs.layers.Entities.user;
 import com.jobs.layers.Events.ChangePasswordEvent;
 import com.jobs.layers.Events.RegistrationCompleteEvent;
+import com.jobs.layers.Responses.Response;
 import com.jobs.layers.Services.Authentication;
 import com.jobs.layers.Services.JobsService;
 
@@ -36,8 +37,7 @@ public class RegistrationController {
 @Autowired
 private helper help;
 
-@Autowired
-private JobsService jobService;
+
 
 @Autowired
 private Authentication auth;
@@ -65,7 +65,7 @@ public ResponseEntity<String> isAlive(final HttpServletRequest request) throws I
     @PostMapping("/{userType}/register")
     public ResponseEntity<String> register(@PathVariable("userType") String userType, @RequestBody userModel requestModel, final HttpServletRequest request) throws InvalidUserTypeException, EmailInUseException, UnknownHostException {
 
-       user newUser = auth.register(userType, requestModel);
+       user newUser = auth.register(userType, requestModel).data;
        newUser.type = userType;
         publisher.publishEvent(new RegistrationCompleteEvent(newUser, help.generateUrl(request)));
         return ResponseEntity.ok(help.generateHosturl(request) + "/" + userType + "/" + newUser.email + "/CompleteRegistration");
@@ -73,7 +73,7 @@ public ResponseEntity<String> isAlive(final HttpServletRequest request) throws I
 
 
     @GetMapping("/{userType}/verifyRegistration")
-    public ResponseEntity<String> verifyTokken(@RequestParam("token") String token, @PathVariable("userType") String userType) throws TOKEN_EXPIRED, InvalidUserTypeException {
+    public ResponseEntity<Response<String>> verifyTokken(@RequestParam("token") String token, @PathVariable("userType") String userType) throws TOKEN_EXPIRED, InvalidUserTypeException {
         return auth.verifyToken(token,userType);
     }
 
@@ -81,14 +81,14 @@ public ResponseEntity<String> isAlive(final HttpServletRequest request) throws I
 
     @GetMapping("/resendVerificationToken")
     public ResponseEntity<String> resendVerificationToken(@RequestParam("token") String token, final  HttpServletRequest request) throws TOKEN_EXPIRED, UnknownHostException {
-    publisher.publishEvent(new RegistrationCompleteEvent( auth.resendVerificationToken(token), help.generateUrl(request)));
+    publisher.publishEvent(new RegistrationCompleteEvent( auth.resendVerificationToken(token).data, help.generateUrl(request)));
           return ResponseEntity.ok("Resent sucessfull");
 }
 
 @GetMapping("/forgotPassword")
     public ResponseEntity<String>  forgotPassword(@RequestParam("email") String email, final HttpServletRequest request) throws EmailNotFoundException, UnknownHostException {
 
-  user curUser =   auth.forgotPassword(email);
+  user curUser =   auth.forgotPassword(email).data;
   String token = UUID.randomUUID().toString();
 String url = generateResetPasswordUrl(request) + token;
 logger.info("Requested password change for {} with Password reset token {}",curUser.email,token);
@@ -96,12 +96,12 @@ publisher.publishEvent(new ChangePasswordEvent(curUser, url, token));
     return ResponseEntity.ok(url);
 }
 @PostMapping(path = "/changePassword")
-public ResponseEntity<String>  changeOldPassword(@RequestBody ChangePasswordBody passwordBody) throws EmailNotFoundException, InvalidPasswordException {
+public ResponseEntity<Response<String>>  changeOldPassword(@RequestBody ChangePasswordBody passwordBody) throws EmailNotFoundException, InvalidPasswordException {
     return auth.changeCurrentPassword(passwordBody);
 }
 
 @PostMapping("/savePassword")
-public ResponseEntity<String> changePassword(@RequestParam("token") String token, @RequestBody NewPasswordBody newPass) throws TOKEN_EXPIRED {
+public ResponseEntity<Response<String>> changePassword(@RequestParam("token") String token, @RequestBody NewPasswordBody newPass) throws TOKEN_EXPIRED {
    return auth.changePassword(token,newPass);
 }
 @PostMapping("/company/{email}/CompleteRegistration")
@@ -115,11 +115,11 @@ public ResponseEntity<String> completeRegistrationForEmployee(@PathVariable("ema
 }
 
 @GetMapping("/employee/login")
-public ResponseEntity<String> loginEmployee(@RequestBody Login credentials) throws EmailNotFoundException, InvalidPasswordException, UnAuthenticatedAccountAccessException{
+public ResponseEntity<Response<String>> loginEmployee(@RequestBody Login credentials) throws EmailNotFoundException, InvalidPasswordException, UnAuthenticatedAccountAccessException{
     return auth.loginEmployee(credentials);
 }
 @GetMapping("/company/login")
-public ResponseEntity<String> loginCompany(@RequestBody Login credentials) throws EmailNotFoundException, InvalidPasswordException, UnAuthenticatedAccountAccessException{
+public ResponseEntity<Response<String>> loginCompany(@RequestBody Login credentials) throws EmailNotFoundException, InvalidPasswordException, UnAuthenticatedAccountAccessException{
     return auth.loginCompany(credentials);
 }
 

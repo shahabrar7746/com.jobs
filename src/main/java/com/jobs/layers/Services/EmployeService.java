@@ -4,6 +4,7 @@ import com.jobs.layers.DTOs.EmployeeTransferTemplate;
 import com.jobs.layers.Entities.companies;
 import com.jobs.layers.Exceptions.EmailNotFoundException;
 import com.jobs.layers.Exceptions.InvalidEncryptedIdException;
+import com.jobs.layers.Responses.Response;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
@@ -17,11 +18,11 @@ import java.util.List;
 public interface EmployeService {
 
 
-    public employee save(employee empl);
+    public Response<employee> save(employee empl);
 
-   public EmployeeTransferTemplate getEmployeeByEncryptedId(String id) throws InvalidEncryptedIdException;
+   public Response<EmployeeTransferTemplate> getEmployeeByEncryptedId(String id) throws InvalidEncryptedIdException;
 
 
-   public  List<EmployeeTransferTemplate> findEmployeeByQuery(String query, companies com, HttpServletRequest req) throws UnknownHostException;
+   public  Response<List<EmployeeTransferTemplate>> findEmployeeByQuery(String query, companies com, HttpServletRequest req) throws UnknownHostException;
 
 }

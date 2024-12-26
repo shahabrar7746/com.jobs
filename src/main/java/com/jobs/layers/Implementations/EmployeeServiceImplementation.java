@@ -9,6 +9,7 @@ import com.jobs.layers.Exceptions.EmailNotFoundException;
 import com.jobs.layers.Exceptions.InvalidEncryptedIdException;
 import com.jobs.layers.Messages.StringMessages;
 import com.jobs.layers.Repositories.employee_repo;
+import com.jobs.layers.Responses.Response;
 import com.jobs.layers.Services.EmployeService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.hibernate.service.spi.InjectService;
@@ -37,15 +38,16 @@ public class EmployeeServiceImplementation implements EmployeService {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
     @Override
-    public employee save(employee empl) {
+    public Response<employee> save(employee empl) {
             //saves employee object after registration completion.
         logger.info("Save employee method executed");
         employeRepo.save(empl);
-        return empl;
+        Response<employee> response = new Response<>(empl, HttpStatus.ACCEPTED.value());
+        return response;
     }
 
     @Override
-    public EmployeeTransferTemplate getEmployeeByEncryptedId(String id) throws InvalidEncryptedIdException {
+    public Response<EmployeeTransferTemplate> getEmployeeByEncryptedId(String id) throws InvalidEncryptedIdException {
        employee empl = employeRepo.findByEncryptedId(id);
        if(empl == null){
            logger.error("Requested for EmployeeTransferTemplate with invalid encrypted id, {}",id);
@@ -63,10 +65,11 @@ public class EmployeeServiceImplementation implements EmployeService {
        employeeTemplate.skills = empl.skills;
 
        employeeTemplate.joined = userObject.createdAt;
-       return employeeTemplate;
+       Response<EmployeeTransferTemplate> response = new Response<>(employeeTemplate, HttpStatus.ACCEPTED.value());
+       return response;
     }
 
-    public List<EmployeeTransferTemplate> findEmployeeByQuery(String query, companies com, HttpServletRequest req) throws UnknownHostException {
+    public Response<List<EmployeeTransferTemplate>> findEmployeeByQuery(String query, companies com, HttpServletRequest req) throws UnknownHostException {
         List<employee> listOfAllEmployee = employeRepo.findAll();
         List<EmployeeTransferTemplate> resolutionList = new ArrayList<EmployeeTransferTemplate>();
         for(employee curEmployee : listOfAllEmployee){
@@ -78,7 +81,8 @@ public class EmployeeServiceImplementation implements EmployeService {
                 resolutionList.add(template);
             }
         }
-        return resolutionList;
+        Response<List<EmployeeTransferTemplate>> response = new Response<>(resolutionList, HttpStatus.OK.value());
+        return response;
     }
 }
 

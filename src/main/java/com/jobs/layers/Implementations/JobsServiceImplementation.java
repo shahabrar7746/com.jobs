@@ -6,6 +6,7 @@ import com.jobs.layers.Entities.*;
 import com.jobs.layers.Exceptions.TOKEN_EXPIRED;
 import com.jobs.layers.Messages.StringMessages;
 import com.jobs.layers.Repositories.token_repo;
+import com.jobs.layers.Responses.Response;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import com.jobs.layers.Exceptions.NoJobsFoundException;
@@ -58,7 +59,7 @@ private employee_repo EmployeeRepo;
 
 
 
-    public ResponseEntity<List<JobsTransferTemplate>> fetchJobs(String query, String token,final HttpServletRequest req) throws NoJobsFoundException, TOKEN_EXPIRED, UnknownHostException{
+    public ResponseEntity<Response<List<JobsTransferTemplate>>> fetchJobs(String query, String token, final HttpServletRequest req) throws NoJobsFoundException, TOKEN_EXPIRED, UnknownHostException{
         tokens loginToken = loginTokenRepo.findByToken(token);
 
         if(loginToken == null || help.isTokenExpired(loginToken)){
@@ -113,7 +114,8 @@ private employee_repo EmployeeRepo;
             throw new NoJobsFoundException(StringMessages.NO_JOB_FOUND, HttpStatus.NOT_FOUND);
         }
         loginTokenRepo.save(help.increaseExpirationTimeOfLoginTokens(loginToken));
-        return ResponseEntity.ok(queryResolutionList);
+        Response<List<JobsTransferTemplate>> response = new Response<>(queryResolutionList, HttpStatus.OK.value());
+        return ResponseEntity.ok(response);
 
     }
 
@@ -123,7 +125,7 @@ private employee_repo EmployeeRepo;
     }
 
     @Override
-    public ResponseEntity<JobsTransferTemplate> findJobByEncryptedId(String encryptedId, String token,final HttpServletRequest req) throws TOKEN_EXPIRED, NoJobsFoundException, UnknownHostException {
+    public ResponseEntity<Response<JobsTransferTemplate>> findJobByEncryptedId(String encryptedId, String token, final HttpServletRequest req) throws TOKEN_EXPIRED, NoJobsFoundException, UnknownHostException {
         tokens curToken = loginTokenRepo.findByToken(token);
 
         if(curToken == null || help.isTokenExpired(curToken)){
@@ -161,24 +163,25 @@ private employee_repo EmployeeRepo;
         JobsTransferTemplate template = new JobsTransferTemplate(curJob,token,isApplied);
         template.requestId = token;
         template.companyUrl = help.generateHosturl(req) + "/company/" + curJob.company.encryptedId;
-
-        return ResponseEntity.ok(template);
+Response<JobsTransferTemplate> response = new Response<>(template, HttpStatus.OK.value());
+        return ResponseEntity.ok(response);
     }
 
 
     @Override
-    public ResponseEntity<JobsTransferTemplate> findJobByEncryptedId(String id, final HttpServletRequest req) throws NoJobsFoundException, UnknownHostException {
+    public ResponseEntity<Response<JobsTransferTemplate>> findJobByEncryptedId(String id, final HttpServletRequest req) throws NoJobsFoundException, UnknownHostException {
         jobs curJob = jobsRepo.findByEncryptedId(id);
         if(curJob == null){
             throw new NoJobsFoundException(StringMessages.NO_JOB_FOUND,HttpStatus.NOT_FOUND);
         }
         JobsTransferTemplate template = new JobsTransferTemplate(curJob);
         template.companyUrl = help.generateHosturl(req) + "/company/" + curJob.company.encryptedId;
-        return ResponseEntity.ok(template);
+        Response<JobsTransferTemplate> response = new Response<>(template, HttpStatus.OK.value());
+        return ResponseEntity.ok(response);
     }
 
     @Override
-    public ResponseEntity<JobsTransferTemplate> apply(String token, String encryptedJobId) throws TOKEN_EXPIRED, NoJobsFoundException {
+    public ResponseEntity<Response<JobsTransferTemplate>> apply(String token, String encryptedJobId) throws TOKEN_EXPIRED, NoJobsFoundException {
         tokens currentLoginToken = loginTokenRepo.findByToken(token);
         if(currentLoginToken == null || help.isTokenExpired(currentLoginToken)){
             throw new TOKEN_EXPIRED(HttpStatus.BAD_REQUEST, StringMessages.TOKEN_EXPIRED);
@@ -227,7 +230,8 @@ try {
 }
         //prepare jobTransfer template.
         JobsTransferTemplate template = new JobsTransferTemplate(currentJob, token,isApplied);
-        return ResponseEntity.ok(template);
+Response<JobsTransferTemplate> response = new Response<>(template, HttpStatus.OK.value());
+        return ResponseEntity.ok(response);
     }
 
 
